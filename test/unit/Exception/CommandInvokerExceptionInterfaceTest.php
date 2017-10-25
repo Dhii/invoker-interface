@@ -29,6 +29,15 @@ class CommandInvokerExceptionInterfaceTest extends TestCase
     public function createInstance()
     {
         $mock = $this->mock(static::TEST_SUBJECT_CLASSNAME)
+                ->getFile()
+                ->getLine()
+                ->getMessage()
+                ->getCode()
+                ->getPrevious()
+                ->getTrace()
+                ->getTraceAsString()
+                ->__toString()
+
                 ->getCommandInvoker()
                 ->new();
 
