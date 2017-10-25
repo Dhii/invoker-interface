@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Io\Resource\UnitTest;
+namespace Dhii\Invocation\UnitTest;
 
 use Xpmock\TestCase;
 use Dhii\Invocation\CommandInvokerAwareInterface as TestSubject;
