@@ -16,8 +16,8 @@ interface CommandInvokerInterface
      *
      * @since [*next-version*]
      *
-     * @param string|Stringable $code   The command to invoke.
-     * @param array             $args   The arguments to pass to the command.
+     * @param string|Stringable $code The command to invoke.
+     * @param array             $args The arguments to pass to the command.
      */
     public function invoke($code, array $args = array());
 }
