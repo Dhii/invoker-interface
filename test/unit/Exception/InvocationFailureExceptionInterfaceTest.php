@@ -39,6 +39,8 @@ class InvocationFailureExceptionInterfaceTest extends TestCase
                 ->__toString()
 
                 ->getCommandInvoker()
+                ->getCommand()
+                ->getArgs()
                 ->new();
 
         return $mock;
@@ -54,6 +56,8 @@ class InvocationFailureExceptionInterfaceTest extends TestCase
         $subject = $this->createInstance();
 
         $this->assertInstanceOf(static::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the subject could not be created');
-        $this->assertInstanceOf('Dhii\Invocation\CommandInvokerAwareInterface', $subject, 'A valid instance of the subject could not be created');
+        $this->assertInstanceOf('Dhii\Invocation\CommandInvokerAwareInterface', $subject, 'Subject does not implement required interface');
+        $this->assertInstanceOf('Dhii\Invocation\CommandAwareInterface', $subject, 'Subject does not implement required interface');
+        $this->assertInstanceOf('Dhii\Invocation\ArgsAwareInterface', $subject, 'Subject does not implement required interface');
     }
 }
