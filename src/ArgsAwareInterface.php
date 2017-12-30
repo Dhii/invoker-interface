@@ -2,6 +2,8 @@
 
 namespace Dhii\Invocation;
 
+use Traversable;
+
 /**
  * Something that can have invocation arguments retrieved.
  *
@@ -14,7 +16,7 @@ interface ArgsAwareInterface
      *
      * @since [*next-version*]
      *
-     * @return array The arguments.
+     * @return array|Traversable The arguments.
      */
     public function getArgs();
 }

@@ -3,6 +3,7 @@
 namespace Dhii\Invocation;
 
 use Dhii\Util\String\StringableInterface as Stringable;
+use Traversable;
 
 /**
  * Something that can invoke commands.
@@ -17,7 +18,7 @@ interface CommandInvokerInterface
      * @since [*next-version*]
      *
      * @param string|Stringable $code The command to invoke.
-     * @param array             $args The arguments to pass to the command.
+     * @param array|Traversable $args The arguments to pass to the command, if any
      */
-    public function invoke($code, array $args = array());
+    public function invoke($code, $args = null);
 }
